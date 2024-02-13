@@ -1,0 +1,133 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+.container
+{
+	width:90%;
+	margin:0 auto;
+}
+.row
+{
+	display:flex;
+	flex-wrap:wrap;
+}
+
+.col-1
+{
+	width:8.33%;
+	padding:0 15px;
+}
+.col-2
+{
+	width:16.66%;
+	padding:0 15px;
+}
+.col-3
+{
+	width:25%;
+	padding:0 15px;
+}
+.col-4
+{
+	width:33.33%;
+	padding:0 15px;
+}
+.col-5
+{
+	width:41.66%;
+	padding:0 15px;
+}
+.col-6
+{
+	width:50%;
+	padding:0 15px;
+}
+.col-7
+{
+	width:58.33%;
+	padding:0;
+}
+.col-8
+{
+	width:66.66%;
+	padding:0 15px;
+}
+.col-9
+{
+	width:75%;
+	padding:0 15px;
+}
+.col-10
+{
+	width:83.33%;
+	padding:0 15px;
+}
+.col-11
+{
+	width:91.66%;
+	padding:0 15px;
+}
+.col-12
+{
+	width:100%;
+	padding:0 15px;
+}
+#nav-sec{
+	padding:15px 0;
+}
+
+.align-item
+{
+	align-items:center;
+	padding:15px 0;
+	/* justify-content:space-between; */
+}
+.mentor h2
+{
+	color:#5fcf80;
+	font-size:30px;
+}
+.list
+{
+	display:flex;
+	justify-content:flex-end;
+}
+.list li
+{
+	list-style:none;
+    padding: 0 20px;
+}
+.list li a
+{
+	text-decoration:none;
+	color:black;
+	font-size:20px;
+}
+.nav-but
+{
+	display:flex;
+	justify-content:flex-end;
+}
+.nav-but a
+{
+	text-decoration:none;
+	color:white;
+	font-size:15px;
+	background-color:#5fcf80;
+	border-radius:20px;
+	padding:10px 15px;
+}
+/* .nav-list a.home-sec
+{
+	color:#5fcf80;
+} */
+.nav-list a:hover
+{
+	color:#5fcf80;
+}
+.nav-but a:hover
+{
+	background-color:#4caf72;
+}

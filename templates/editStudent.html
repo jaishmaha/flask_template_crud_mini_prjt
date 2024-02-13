@@ -1,0 +1,43 @@
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col col-7">
+            <form method="post">
+                <fieldset>
+                <legend>Student Form</legend>
+
+                <label for="name" style="margin-right: 20px;" class="form-label"> Name </label>
+                <input type="text" id="name" name="Name" placeholder="Enter your Name" class="form-control form-control-sm sm-auto inp" value="{{Student_list.Name}}"><br>
+
+                <label for="age" style="margin-right: 35px;" class="form-label"> Age </label>
+                <input type="number" id="age" name="Age" placeholder="Enter your Age" value="{{Student_list.Age}}" class="form-control form-control-sm sm-auto inp"><br>
+
+                <label for="rollno" style="margin-right: 13px;" class="form-label"> RollNo </label>
+                <input type="number" id="rollno" name="RollNo" placeholder="Enter your Roll Number" value="{{Student_list.Roll_NO}}" class="form-control form-control-sm sm-auto inp"><br>
+
+                <div>
+                    <label for="m1" class="form-label">Subject-1</label>
+                    <input type="number" id="m1" name="Subject-1" value="{{Student_list.Marks[0]}}" class="form-control form-control-sm sm-auto inp"><br>
+
+                    <label for="m2" class="form-label">Subject-2</label>
+                    <input type="number" id="m2" name="Subject-2" value="{{Student_list.Marks[1]}}" class="form-control form-control-sm sm-auto inp"><br>
+
+                    <label for="m3" class="form-label">Subject-3</label>
+                    <input type="number" id="m3" name="Subject-3" value="{{Student_list.Marks[2]}}" class="form-control form-control-sm sm-auto inp"><br>
+
+                    <label for="m4" class="form-label">Subject-4</label>
+                    <input type="number" id="m4" name="Subject-4" value="{{Student_list.Marks[3]}}" class="form-control form-control-sm sm-auto inp"><br>
+
+                    <label for="m5" class="form-label">Subject-5</label>
+                    <input type="number" id="m5" name="Subject-5" value="{{Student_list.Marks[4]}}" class="form-control form-control-sm sm-auto inp"><br>
+                </div>
+                <div style="text-align: center;">
+                    <input type="submit" value="Submit" class="sub-but">
+                </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

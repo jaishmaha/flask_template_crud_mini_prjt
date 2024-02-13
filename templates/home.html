@@ -1,0 +1,37 @@
+{% extends 'index.html' %}
+{% block body %}
+    
+<table class="table table-bordered fs-7 text-center">
+    <tr>
+        <th colspan="4">Student Details</th>
+        <th colspan="5"> Marks</th>
+        <th colspan="2"> Action</th>
+    </tr>
+    <tr>
+        <th>S.No</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>RollNo</th>
+        <th>Sub-1</th>
+        <th>Sub-2</th>
+        <th>Sub-3</th>
+        <th>Sub-4</th>
+        <th>Sub-5</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    {% for i in Student_list %}
+    <tr>
+        <td>{{loop.index}}</td> 
+        <td>{{i.Name}}</td>
+        <td>{{i.Age}}</td>
+        <td>{{i.Roll_NO}}</td>
+        {% for j in i.Marks %}
+        <td>{{j}}</td>
+        {% endfor %}
+        <td><button class="btn btn-primary m-1"><a href="{{url_for('editStudent',index=loop.index)}}" class="nav-link">Edit</a></button></td>
+        <td><button class="btn btn-danger m-1"><a href="{{url_for('deleteStudent',index=loop.index)}}" class="nav-link">Delete</a></button></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

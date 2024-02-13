@@ -1,0 +1,134 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+    <style>
+         /* body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 10px;
+        } */
+        /* caption{
+            font-size: 20px;
+            color: blueviolet;
+        }
+        table
+        {
+            margin: 0 20px;
+            padding: 20px;
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+        th,td{
+            border: 1px solid black;
+            padding: 8px;
+        } */
+        form{
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 0px 0px 8px gray;
+            padding: 10px 40px;
+            margin:0 20px;
+            background-color: rgb(239, 246, 244);
+        }
+        label
+        {
+            font-size:18px;
+            font-weight: 700;
+        }
+        .inp
+        {
+            display: inline-block;
+            padding: 10px 25px;
+            border-radius: 8px;
+        }
+        .sub-but
+        {
+            padding: 10px;
+            font-weight: 800;
+            background-color: blue;
+            color: aliceblue;
+            border-radius: 8px;
+        }
+    </style>
+    <div class="container">
+        <div class="row">
+            <div class="col col-7">
+                <form action="{{url_for('addStudent')}}" method="post">
+                    <fieldset>
+                        <legend>Student Form</legend>
+    
+                        <label for="name" style="margin-right: 20px;" class="form-label"> Name </label>
+                        <input type="text" id="name" name="Name" placeholder="Enter your Name"  class="form-control form-control-sm sm-auto inp">
+    
+                        <label for="age" style="margin-right: 35px;" class="form-label" > Age </label>
+                        <input type="number" id="age" name="Age" placeholder="Enter your Age" class="form-control form-control-sm sm-auto inp">
+    
+                        <label for="rollno" style="margin-right: 13px;"> RollNo </label>
+                        <input type="number" id="rollno" name="RollNo" placeholder="Enter your Roll Number"
+                        class="form-control form-control-sm sm-auto inp">
+    
+                        <div>
+                            <label for="m1">Subject-1</label>
+                            <input type="number" id="m1" name="Subject-1" class="form-control form-control-sm inp"><br>
+    
+                            <label for="m2">Subject-2</label>
+                            <input type="number" id="m2" name="Subject-2" class="form-control form-control-sm inp"><br>
+    
+                            <label for="m3">Subject-3</label>
+                            <input type="number" id="m3" name="Subject-3" class="form-control form-control-sm inp"><br>
+    
+                            <label for="m4">Subject-4</label>
+                            <input type="number" id="m4" name="Subject-4" class="form-control form-control-sm inp"><br>
+    
+                            <label for="m5">Subject-5</label>
+                            <input type="number" id="m5" name="Subject-5" class="form-control form-control-sm inp"><br>
+                        </div>
+                        <div style="text-align: center;">
+                            <input type="submit" value="Submit" class="from-control sub-but">
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+                <!-- <div class="col col-4">
+                    <table class="'table table-bordered fs-7 text-center">
+                        <tr>
+                            <th colspan="4">Student Details</th>
+                            <th colspan="5"> Marks</th>
+                            <th colspan="2"> Action</th>
+                        </tr>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>RollNo</th>
+                            <th>Sub-1</th>
+                            <th>Sub-2</th>
+                            <th>Sub-3</th>
+                            <th>Sub-4</th>
+                            <th>Sub-5</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                        {% for i in Student_list %}
+                        <tr>
+                            <td>{{loop.index}}</td> 
+                            <td>{{i.Name}}</td>
+                            <td>{{i.Age}}</td>
+                            <td>{{i.Roll_NO}}</td>
+                            {% for j in i.Marks %}
+                            <td>{{j}}</td>
+                            {% endfor %}
+                            <td><button class="btn btn-primary m-1"><a href="{{url_for('editStudent',index=loop.index)}}" class="nav-link">Edit</a></button></td>
+                            <td><button class="btn btn-danger m-1"><a href="{{url_for('deleteStudent',index=loop.index)}}" class="nav-link">Delete</a></button></td>
+                        </tr>
+                        {% endfor %}
+                      </table>
+                    </div>  -->
+            <!-- </div>
+        </div>
+    </div> -->
+{% endblock %}

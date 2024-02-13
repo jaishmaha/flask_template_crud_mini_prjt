@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+{% block body %}
+<div class="d-flex justify-content-center">
+  <div class="col col-6">
+    <form method='post'>
+      <div class="mb-3">
+        <label for="name" class="form-label">Email address</label>
+        <input type="text" class="form-control" id="name" aria-describedby="emailHelp" name="userName" placeholder="Enter the name">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Enter the password">
+      </div>
+      <button type="submit" class="btn btn-primary form-control" value="submit">Login</button>
+    </form>
+  </div>
+</div>
+{% endblock body %}
